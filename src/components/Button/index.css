@@ -1,0 +1,23 @@
+.button{
+    background: red;
+}
+.text{
+    color: black;
+    background: none;
+}
+.primary{
+    background: blue;
+}
+.outlined{
+    background: none;
+    border: 1px solid black;
+}
+.text{
+    background: none;
+    
+}
+.disabled{
+    cursor: default;
+    background: lightgray;
+    text-color: gray;
+}

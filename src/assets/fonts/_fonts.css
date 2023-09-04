@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Cormorant_Bold', sans-serif;
+    src:
+        url('../CormorantGaramond-Bold.woff2') format('woff2'),
+        url('../CormorantGaramond-Bold.woff') format('woff'),
+        url('../CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant_BoldItalic',sans-serif;
+    src:
+        url('../CormorantGaramond_BoldItalic.woff2') format('woff2'),
+        url('../CormorantGaramond_BoldItalic.woff') format('woff'),
+        url('../CormorantGaramond_BoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Cormorant_Regular',sans-serif;
+    src:
+        url('../CormorantGaramond-Regular.woff2') format('woff2'),
+        url('../CormorantGaramond-Regular.woff') format('woff'),
+        url('../CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

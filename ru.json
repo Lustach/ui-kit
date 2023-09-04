@@ -1,0 +1,23 @@
+{
+    "page1": {
+        "name": "Title",
+        "subtitle": "subtitle",
+        "cards": {
+            "cardType1": {
+                "name": "Button",
+                "action": "ActionName",
+                "title": "",
+                "subtitle": ""
+            },
+            "cardType2":{
+                "name": "Button",
+                "action": "ActionName",
+                "title": "",
+                "subtitle": ""
+            }
+        }
+    },
+    "page2": {
+        
+    }
+}
