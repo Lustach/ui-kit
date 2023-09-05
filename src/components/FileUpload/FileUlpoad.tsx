@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import './index.css'
 import * as F from './FileUpload.styled';
 export const DragDropFile = () => {
 
