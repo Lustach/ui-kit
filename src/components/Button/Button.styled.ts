@@ -1,13 +1,20 @@
 import styled, { css } from 'styled-components'
 import { theme } from '@/theme.styled';
-
-export const Button = styled.button < { $buttonType: 'primary' | 'outlined' | 'text' | 'link'; disabled?: boolean } > `
+type Props = {
+    $buttonType: 'primary' | 'outlined' | 'text' | 'link'; // Add $buttonType prop
+    disabled?: boolean;
+    className?: string
+}
+export const Button = styled.button<Props>`
     color: '#ffffff';
     &:disabled{
         background: lightgray;
         cursor: not-allowed;
         color: gray;
         border: 2px solid gray;
+    }
+    &:hover{
+        background: ${theme.backgroundColorActive};
     }
  ${(props) => {
         switch (props.$buttonType) {

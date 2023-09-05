@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react'
 import './index.css'
+import * as F from './FileUpload.styled';
 export const DragDropFile = () => {
-    // drag state
+
     const [dragActive, setDragActive] = useState(false);
-    // ref
+    const [imgSrc, setImgSrc] = useState('')
     const inputRef = useRef<HTMLInputElement | null>(null);
 
-    // handle drag events
     const handleDrag = function (e: React.DragEvent) {
         e.preventDefault();
         e.stopPropagation();
@@ -17,26 +17,31 @@ export const DragDropFile = () => {
         }
     };
 
-    // triggers when file is dropped
     const handleDrop = function (e: React.DragEvent) {
         e.preventDefault();
         e.stopPropagation();
         setDragActive(false);
         if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-            // handleFiles(e.dataTransfer.files);
+            handleFile(e.dataTransfer.files[0])
         }
     };
-
-    // triggers when file is selected with click
+    const handleFile = (files: File) => {
+        const fr = new FileReader();
+        fr.onload = (event) => {
+            if (event.target) {
+                const result = event.target.result as string;
+                setImgSrc(result)
+            }
+        };
+        fr.readAsDataURL(files)
+    }
     const handleChange = function (e: React.ChangeEvent<HTMLInputElement>) {
         e.preventDefault();
         if (e.target.files && e.target.files[0]) {
-            console.log(e.target.files)
-            // handleFiles(e.target.files);
+            handleFile(e.target.files[0])
         }
     };
 
-    // triggers the input when the button is clicked
     const onButtonClick = () => {
         if (inputRef.current) {
             inputRef.current.click();
@@ -44,15 +49,16 @@ export const DragDropFile = () => {
     };
 
     return (
-        <form id="form-file-upload" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
-            <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
-            <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : ""}>
+        <F.Form onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
+            <F.Input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
+            <F.Label htmlFor="input-file-upload" className={dragActive ? "drag-active" : ""}>
+                {imgSrc && <F.Thumbnail src={imgSrc}></F.Thumbnail>}
                 <div>
-                    <p>Drag and drop your file here or</p>
-                    <button className="upload-button" onClick={onButtonClick}>Upload a file</button>
+                    <F.Title>Перетащите файл сюда или</F.Title>
+                    <F.FormButton buttonType='text' onClick={onButtonClick}><span>Загрузите</span></F.FormButton>
                 </div>
-            </label>
-            {dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div>}
-        </form>
+            </F.Label>
+            {dragActive && <F.DragFileElement onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop} />}
+        </F.Form>
     );
 };

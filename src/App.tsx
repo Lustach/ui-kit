@@ -2,16 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { ButtonAdd } from './ButtonAdd/ButtonAdd'
 import { Button } from './components/Button/Button'
 import { DragDropFile } from './components/FileUpload/FileUlpoad'
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
-      {/* <ButtonAdd /> */}
-      <Button type="outlined" disabled />
+      <Button buttonType="outlined">Just button</Button>
       <DragDropFile></DragDropFile>
       <p>Test</p>
       <div>
