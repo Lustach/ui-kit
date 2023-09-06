@@ -3,6 +3,10 @@ import { theme } from '@/theme.styled'
 type TabProps = {
     $active: boolean
 }
+type TabContentProps = {
+    $width: number
+    $height: number
+}
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -11,7 +15,7 @@ export const Container = styled.div`
     border: 1px solid ${theme.borderColor};
     width: fit-content;
     border-radius: 8px;
-    margin: 8px auto;
+    margin: 0px auto;
 `
 export const Tab = styled.div<TabProps>`
     height: 34px;
@@ -39,4 +43,22 @@ export const Tab = styled.div<TabProps>`
                 `
         }
     }}
+`
+export const TabContent = styled.div<TabContentProps>`
+    display: flex;
+    border: 1px solid ${theme.borderColor};
+    width: 300px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+${(props) => {
+        return css`
+    width: ${props.$width}px;
+    height: ${props.$height}px;
+    `
+}}
 `
