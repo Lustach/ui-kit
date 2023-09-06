@@ -1,5 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { theme } from '@/theme.styled'
+type TabProps = {
+    $active: boolean
+}
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -10,13 +13,13 @@ export const Container = styled.div`
     border-radius: 8px;
     margin: 8px auto;
 `
-export const Tab = styled.div`
+export const Tab = styled.div<TabProps>`
     height: 34px;
     width: 56px;
     color: black;
     font-size:20px;
     &:hover{
-        background-color: ${theme.backgroundColorActive};
+        background-color: ${theme.backgroundColorFocus};
         cursor: pointer;
     }
     &:first-child{
@@ -28,4 +31,12 @@ export const Tab = styled.div`
     &:not(&:last-child){
         border-right: 1px solid ${theme.borderColor};
     }
+    ${(props) => {
+        switch (props.$active) {
+            case true:
+                return css`
+                    background-color: ${theme.backgroundColorActive};
+                `
+        }
+    }}
 `

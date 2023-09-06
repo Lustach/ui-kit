@@ -3,7 +3,9 @@ export const theme = {
     secondaryColor: '#007bff',
     notificationError: '#FA3B33',
     backgroundColor: '#ffffff',
-    backgroundColorActive: '#DDEDFF',
+    backgroundColorActive: '#BEDDFF',
+    backgroundColorFocus: '#DDEDFF',
+
     textColor: '#ffffff',
     accentColor: '#ffc107',
     borderColor: '#B6B6B6',
