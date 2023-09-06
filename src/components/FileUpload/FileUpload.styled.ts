@@ -29,7 +29,7 @@ export const Label = styled.label < { htmlFor: "input-file-upload"; className: '
     align-items: center;
     justify-content: center;
     &.drag-active {
-        background-color: ${theme.backgroundColorActive};
+        background-color: ${theme.backgroundColorFocus};
     }
 `
 export const Title = styled.p`

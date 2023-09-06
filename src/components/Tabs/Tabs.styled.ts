@@ -35,7 +35,7 @@ export const Tab = styled.div<TabProps>`
         switch (props.$active) {
             case true:
                 return css`
-                    background-color: ${theme.backgroundColorActive};
+                    background-color: ${theme.backgroundColorFocus};
                 `
         }
     }}
