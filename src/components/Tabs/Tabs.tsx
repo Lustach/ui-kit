@@ -2,14 +2,13 @@ import React, { PropsWithChildren, useContext, useEffect, useState } from 'react
 import { Context } from '@/App';
 import { Tab as TabType } from './types';
 import * as T from './Tabs.styled';
-// import { TabContent } from './TabContent';
+import { JsonViewComponent } from '../JsonView/JsonView';
 export const TabsC: React.FC<PropsWithChildren> = () => {
     const tabs = useContext(Context);
     const [activeTab, setActiveTab] = useState<TabType | null>(null);
     useEffect(() => {
         setActiveTab(tabs[0])
     }, [tabs]);
-
     const onClick = (tab: TabType) => {
         setActiveTab(tab);
     };
@@ -25,7 +24,8 @@ export const TabsC: React.FC<PropsWithChildren> = () => {
                     ))}
                 </T.Container >
             )}
-            <T.TabContent $width={300} $height={500}>{activeTab?.description}</T.TabContent>
+            {typeof activeTab?.description}
+            <T.TabContent $width={300} $height={500}><JsonViewComponent json={activeTab?.description}/></T.TabContent>
         </>
     );
 };

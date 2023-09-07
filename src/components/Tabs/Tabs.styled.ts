@@ -53,8 +53,13 @@ export const TabContent = styled.div<TabContentProps>`
     align-items: center;
     margin: 0 auto;
     border-radius: 8px;
-    padding: 8px;
+    padding: 8px 0;
     box-sizing: border-box;
+    overflow: auto;
+    overflow-x: hidden;
+    & > div{
+        height: inherit;
+    }
 ${(props) => {
         return css`
     width: ${props.$width}px;

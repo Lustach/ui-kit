@@ -1,0 +1,15 @@
+.json-view__container>div>span{
+    display: none;
+}
+.json-view__container>div{
+    margin: 8px -6px;
+}
+.json-view__container{
+    text-align: left;
+    background: white;
+    width: 100%;
+}
+.json-view__container>div>div>div>div{
+    /* padding-left: 30px; */
+    /* display: none; */
+}

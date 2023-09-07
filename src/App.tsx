@@ -4,15 +4,16 @@ import { Button } from './components/Button/Button'
 import { DragDropFile } from './components/FileUpload/FileUlpoad'
 import { TabsC } from './components/Tabs/Tabs'
 import { Tab } from './components/Tabs/types'
-const initialTabState = [{
-  value: 'ru',
-  description: 'description 1',
-  active: true,
-}, {
-  value: 'eu',
-  description: 'description 2',
-  active: false,
-}]
+import mockData from './components/Tabs/mockData.json'
+const initialTabState =[{
+    value: 'ru',
+    description: mockData,
+    active: true,
+  }, {
+    value: 'eu',
+    description: mockData,
+    active: false,
+  }]
 export const Context = createContext<Tab[]>(initialTabState);
 
 function App() {

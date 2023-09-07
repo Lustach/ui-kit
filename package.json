@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-json-view": "^1.21.3",
+    "react-json-view-lite": "^0.9.8"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.3",
