@@ -1,4 +1,3 @@
-import './index.css'
 import { PropsWithChildren } from 'react'
 import * as S from "./Button.styled"
 type Props = {
