@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 import * as S from "./Button.styled"
-type Props = {
+export type Props = {
     buttonType: 'primary' | 'outlined' | 'text' | 'link'
     disabled?: boolean
     onClick?: () => void;

@@ -3,7 +3,7 @@ import 'react-json-view-lite/dist/index.css';
 import './.json-view__container.css'
 import { JsonView, allExpanded, defaultStyles } from 'react-json-view-lite';
 
-type JsonViewProps = {
+export type JsonViewProps = {
   json: { [key: string]: string } | undefined;
 };
 

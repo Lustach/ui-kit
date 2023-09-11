@@ -24,7 +24,7 @@ function App() {
         <TabsC />
       </Context.Provider>
       <Button buttonType="outlined">Just button</Button>
-      <DragDropFile></DragDropFile>
+      <DragDropFile accept='.cls' multiple={false}></DragDropFile>
     </>
   )
 }

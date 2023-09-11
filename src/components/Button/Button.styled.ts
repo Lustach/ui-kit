@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { theme } from '@/theme.styled';
-type Props = {
+export type Props = {
     $buttonType: 'primary' | 'outlined' | 'text' | 'link'; // Add $buttonType prop
     disabled?: boolean;
     className?: string

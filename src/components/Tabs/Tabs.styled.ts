@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 import { theme } from '@/theme.styled'
-type TabProps = {
+export type TabProps = {
     $active: boolean
 }
-type TabContentProps = {
+export type TabContentProps = {
     $width: number
     $height: number
 }

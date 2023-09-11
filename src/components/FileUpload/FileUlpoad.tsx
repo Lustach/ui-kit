@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import * as F from './FileUpload.styled';
-export const DragDropFile = () => {
+export const DragDropFile = ({ accept, multiple }: { accept?: string, multiple:boolean }) => {
 
     const [dragActive, setDragActive] = useState(false);
     const [imgSrc, setImgSrc] = useState('')
@@ -49,7 +49,7 @@ export const DragDropFile = () => {
 
     return (
         <F.Form onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
-            <F.Input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
+            <F.Input ref={inputRef} type="file" id="input-file-upload" onChange={handleChange} accept={accept || ''} multiple={multiple}/>
             <F.Label htmlFor="input-file-upload" className={dragActive ? "drag-active" : ""}>
                 {imgSrc && <F.Thumbnail src={imgSrc}></F.Thumbnail>}
                 <div>
