@@ -13,7 +13,7 @@ const initialTabState =[{
     value: 'eu',
     description: mockData,
     active: false,
-  }]
+}]
 export const Context = createContext<Tab[]>(initialTabState);
 
 function App() {
