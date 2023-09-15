@@ -1,15 +1,15 @@
 {
-    "_id": "64f46cc959738f4eaa72109e",
-    "guid": "6b8b55ab-2ba0-43ec-a4a3-0bf6ba3f788b",
-    "balance": "$3,767.38",
-    "picture": "http://placehold.it/32x32",
-    "eyeColor": "blue",
-    "name": "Josefina Bass",
-    "gender": "female",
-    "company": "DIGINETIC",
-    "email": "josefinabass@diginetic.com",
-    "phone": "+1 (987) 417-3431",
-    "address": "318 Gates Avenue, Valmy, Washington, 7621",
-    "about": "Nostrud ea exercitation est ad fugiat. Magna commodo aliqua incididunt occaecat laborum. In elit tempor duis non aliquip do ullamco laborum id non laborum voluptate sint officia. Exercitation excepteur quis esse officia veniam sit. Pariatur exercitation consectetur ex dolor elit amet aute esse. Ad amet eiusmod dolor occaecat magna dolor nisi aute veniam cupidatat.\r\n",
-    "registered": "2019-04-16T07:05:48 -04:00"
+  "_id": "64f46cc959738f4eaa72109e",
+  "guid": "6b8b55ab-2ba0-43ec-a4a3-0bf6ba3f788b",
+  "balance": "$3,767.38",
+  "picture": "http://placehold.it/32x32",
+  "eyeColor": "blue",
+  "name": "Josefina Bass",
+  "gender": "female",
+  "company": "DIGINETIC",
+  "email": "josefinabass@diginetic.com",
+  "phone": "+1 (987) 417-3431",
+  "address": "318 Gates Avenue, Valmy, Washington, 7621",
+  "about": "Nostrud ea exercitation est ad fugiat. Magna commodo aliqua incididunt occaecat laborum. In elit tempor duis non aliquip do ullamco laborum id non laborum voluptate sint officia. Exercitation excepteur quis esse officia veniam sit. Pariatur exercitation consectetur ex dolor elit amet aute esse. Ad amet eiusmod dolor occaecat magna dolor nisi aute veniam cupidatat.\r\n",
+  "registered": "2019-04-16T07:05:48 -04:00"
 }

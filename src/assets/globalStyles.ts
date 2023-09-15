@@ -1,4 +1,7 @@
-@import "./assets/fonts/_fonts.css";
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyles = createGlobalStyle`
+@import "./fonts/_fonts.css";
 :root {
   font-family: Cormorand_Bold,sans-serif;
   line-height: 1.5;
@@ -14,7 +17,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   outline: none;
-  box-sizing: border-box;
   border: 0;
 }
 p{
@@ -67,5 +69,8 @@ button {
   }
 }
 *{
-
+  box-sizing: border-box;
 }
+`
+
+export default GlobalStyles

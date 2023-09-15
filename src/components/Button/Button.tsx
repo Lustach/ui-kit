@@ -1,12 +1,14 @@
 import { PropsWithChildren } from 'react'
-import * as S from "./Button.styled"
+import * as S from './Button.styled'
 export type Props = {
-    buttonType: 'primary' | 'outlined' | 'text' | 'link'
-    disabled?: boolean
-    onClick?: () => void;
+  buttonType: 'primary' | 'outlined' | 'text' | 'link'
+  disabled?: boolean
+  onClick?: () => void
 }
 export const Button: React.FC<PropsWithChildren<Props>> = ({ buttonType, disabled, onClick, children }) => {
-    return (
-        <S.Button $buttonType={buttonType} disabled={disabled} onClick={onClick}>{children}</S.Button>
-    )
+  return (
+    <S.Button $buttonType={buttonType} disabled={disabled} onClick={onClick}>
+      {children}
+    </S.Button>
+  )
 }
